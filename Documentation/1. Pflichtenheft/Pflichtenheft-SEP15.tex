@@ -321,6 +321,9 @@ Jedem Systemadministrator stehen auch alle Funktionen eines Trainers zur Verfüg
 	Die allgemeinen Geschäftsbedingungen können vom Systemadministrator editiert werden. Durch Klicken der 'Durchsuchen' - Schaltfläche gibt der Administrator den Pfad einer .txt - Datei an, welche durch Betätigen der 'Speichern' - Schaltfläche hochgeladen wird. Bei Neustart der Anwendung wird die neue .txt - Datei automatisch geladen und somit die bearbeiteten allgemeinen Geschäftsbedingungen verwendet.
 \end{itemize}
 		
+\resetAllCounter
+\renewcommand{\Func}[1]{\stepcounter{Lc}\textcolor{Blue}{\textbf{/D\arabic{Hc}0-\arabic{Lc}0/} #1} \\}
+
 		
 
 \chapter{Produktdaten}
@@ -328,24 +331,52 @@ Jedem Systemadministrator stehen auch alle Funktionen eines Trainers zur Verfüg
         
 	
     \section{System}
+    \Func {} 
+    \begin{itemize}
+    	\item Titel (String)
+    	\item CSS-Datei (String)
+    	\item Impressum (String)
+    	\item Logo (String)
+	    \item AGB (String)
+    \end{itemize}
 	    
 	    
 	    
 	    \subsection{SMTP-Server}
+	    \Func {}
+	    \begin{itemize}
+	    	\item Benutzername (String)
+	    	\item Passwort (String)
+	    	\item Authentifizierung (Boolean)
+	    	\item TLS (Boolean)
+	    	\item Host (String)
+		    \item Port (Integer)
+	    \end{itemize}
 	    
 	    
-	    
-	    	
+\stepHc	    	
 	\section{Kurs}
-	   
-	    
-	    
+	\Func {} 
+	\begin{itemize}
+		\item Titel (String)
+		\item Beschreibung (String)
+		\item Trainer (String)
+		\item Termine (Date)
+		\item Ort (String)
+		\item Preis (float)
+		\item Maximale Teilnehmerzahl (Integer)
+		\item Bild (String)
+	\end{itemize}
+	
+	
+	\section{Kurseinheit}
+
     
     
     		
     \section{Registrierte Benutzer}
-	  
-	    
+    
+      
 	    
 	   
 	    
