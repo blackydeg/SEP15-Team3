@@ -358,6 +358,7 @@ Jedem Systemadministrator stehen auch alle Funktionen eines Trainers zur Verfüg
 	\section{Kurs}
 	\Func {} 
 	\begin{itemize}
+		\item ID (Integer)
 		\item Titel (String)
 		\item Beschreibung (String)
 		\item Trainer (String)
@@ -370,23 +371,61 @@ Jedem Systemadministrator stehen auch alle Funktionen eines Trainers zur Verfüg
 	
 	
 	\section{Kurseinheit}
+	\Func {} 
+	\begin{itemize}
+		\item ID (Integer)
+		\item Titel (String)
+		\item Beschreibung (String)
+		\item Trainer (String)
+		\item Termine (Date)
+		\item Ort (String)
+		\item Preis (float)
+		\item Maximale Teilnehmerzahl (Integer)
+		\item Bild (String)
+	\end{itemize}
 
     
     
     		
     \section{Registrierte Benutzer}
-    
+    \Func {} 
+    \begin{itemize}
+    	\item ID (Integer)
+    	\item Benutzername (String)
+    	\item Passwort (String)
+    	\item Vorname (String)
+    	\item Nachname (String)
+    	\item Geburtsdatum (Date)
+    	\item E-mailadresse (String)
+    	\item Addresse (String)
+    	\item Guthaben (float)
+    	\item Bild (String)
+    \end{itemize}
       
 	    
 	   
-	    
+\resetAllCounter
+\renewcommand{\Func}[1]{\stepcounter{Lc}\textcolor{Blue}{\textbf{/L\arabic{Hc}0-\arabic{Lc}0/} #1} \\}	    
     
 \chapter{Produktleistungen}
 	
 
 	\section{Produktleistungen auf Serverseite}
-		
+	\begin{itemize}
+		\item \Func{} Zur Speicherung der persistenten Daten wird eine PostgreSQL Datenbank verwendet
+		\item \Func{} E-Mailbenachrichtigung, falls von Benutzer erwünscht, bei wichtigen Ereignissen (z.B Registrierung, Buchung einer Kurseinheit bzw Kurses, Terminänderung)
+	\end{itemize}
+	
+
+	
+	\stepHc	
 	\section{Produktleistungen auf Clientseite}
+	\begin{itemize}
+		\item \Func{} Bei Fehleingabe werden bereits eingetragene Daten wieder angezeigt
+		\item \Func{} Fehlermeldungen werden im Browser ausgegeben
+		\item \Func{} Passwörter werden gehasht.
+		\item \Func{} Übertragung aller persönlichen Informationen erfolgen über eine SSL Verbindung
+	\end{itemize}
 	
 		
 		
